@@ -36,6 +36,9 @@ namespace SpotMixesApi
                 sp.GetRequiredService<IOptions<SpotMixesDatabaseSettings>>().Value);
             
             services.AddSingleton<UserService>();
+            services.AddSingleton<AudioService>();
+            services.AddSingleton<PlayListService>();
+            services.AddSingleton<EmployeeService>();
             
             services.AddControllers();
             services.AddSwaggerGen(c =>
